@@ -38,8 +38,8 @@ body{
 }
 
 button{
-    color: -apple-system black;
     text-decoration: none;
+    color: black;
     margin-left: 20px;
     padding: 9px 25px;
     background-color: rgba(0,136,169,1);
@@ -49,13 +49,8 @@ button{
     transition: all 0.3s ease 0s;
 }
 
-button:hover{
+button:hover, button:focus, button:active{
     background-color: rgba(0,136,169,0.8);
-}
-
-button:visited{
-    color:black;
-    text-decoration: none;
 }
 
 .text{
