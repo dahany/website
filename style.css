@@ -13,9 +13,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #000000;
-    padding: 20px calc((130vw - 1300px)/2);
-    min-width: 700px;
-    width: 100%;
+    padding: 20px 20%;
     border-bottom: solid white;
     border-bottom-width: .01px;
 }
