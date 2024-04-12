@@ -13,10 +13,10 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #000000;
-    padding: 20px 20%;
-    border-bottom: solid white;
+    padding: 30px 20%;
+    /* border-bottom: solid white;
     border-bottom-width: .01px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; */
 }
 
 .logo a{
