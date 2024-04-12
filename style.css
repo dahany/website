@@ -4,9 +4,17 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+html{
+    height:100%;
+}
 body{
     text-align: center;
     background-color: #000000;
+   
+    min-height: 100%;
+
+    display:flex;
+    flex-direction: column;
 }
 header{
     display: flex;
@@ -14,10 +22,17 @@ header{
     align-items: center;
     background-color: #000000;
     padding: 30px 20%;
+    margin-bottom: 5px;
     /* border-bottom: solid white;
     border-bottom-width: .01px;
     margin-bottom: 20px; */
 }
+section{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 150px;;
+}
+
 
 .logo a{
     text-decoration: none;
@@ -30,44 +45,57 @@ header{
 nav a:hover{
     color:#0088a9;
 }
-button{
+
+.btn{
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #000000;
     text-decoration: none;
-    color:rgb(255, 255, 255);
     padding:9px 25px;
-    border:none;
     border-radius: 50px;
-    background-color: rgba(0,136,169,1);
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    margin: 10px;
     width:110px;
     height:40px;
     align-items: center;
     justify-content: center;
     display: inline-flex;
+    margin: 8px;
 }
-
-.paybut a button{
-    text-decoration: none;
+.linkedin{
+    border-color:rgb(255, 255, 255);
     color:rgb(255, 255, 255);
-    border:none;
-    border-radius: 50px;
-    background-color: rgba(0,136,169,1);
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    width:110px;
-    height: 40px;
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
-    display: inline-flex;
+    font-size: 24px;
 }
-.paybut a button:hover{
-    background-color: #01728f;;
+.linkedin:hover{
+    background-color: white;
+    color:#0762C8;
 }
-
-button:hover{
-    background-color: #01728f;;
+.venmo{
+    border-color:rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    font-size: 24px;
+}
+.venmo:hover{
+    background-color: white;
+    color:#008CFF;
+}
+.meme{
+    border-color:rgb(255, 255, 255);
+    color:rgb(255, 255, 255);
+    font-size: 14px;
+}
+.meme:hover{
+    background-color: white;
+    color:#000000;
+}
+.nothing{
+    border-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    font-size: 14px;
+}
+.nothing:hover{
+    background-color: white;
+    color:#000000;
 }
 
 
@@ -88,23 +116,17 @@ button:hover{
     font-weight: bold;
 }
 
-.pay{
-    margin-bottom:10px;
-}
-
-
 footer{
     background-color: #000000;
-    margin-top: 30%;
-    padding: 30px;
     text-align: center;
     color:#606060;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
+    vertical-align: center;
+    height: 70px;
+
 }
 footer h1{
     font-weight: 600;
     font-size:15px;
-    padding-bottom: 18px;
 }
