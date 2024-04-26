@@ -82,7 +82,7 @@ nav a:hover{
 .meme{
     border-color:rgb(255, 255, 255);
     color:rgb(255, 255, 255);
-    font-size: 14px;
+    font-size: 12px;
 }
 .meme:hover{
     background-color: white;
