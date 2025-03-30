@@ -2,37 +2,125 @@
 <html lang="en">
 <head>
     <link rel="shortcut icon" type="x-icon" href="./icon.png">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');</style> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dahany (ㆆ _ ㆆ)</title>
-    <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>dahany.com</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --btn-bg: #1e1e1e;
+      --btn-hover: #333;
+      --border-color: #ffffff;
+    }
+
+    .light-mode {
+      --bg-color: #f0f0f0;
+      --text-color: #121212;
+      --btn-bg: #ffffff;
+      --btn-hover: #ddd;
+      --border-color: #121212;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      background-color: var(--btn-bg);
+      color: var(--text-color);
+      padding: 12px 24px;
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 120px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .btn svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--text-color);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.85rem;
+      color: var(--text-color);
+      opacity: 0.35;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href="https://dahany.com">dahany.com</a>
-        </div>
-    </header>
+  <h1><a href="https://dahany.com">dahany.com</a></h1>
 
+  <div class="button-group">
+    <a href="https://www.linkedin.com/in/dahanychoi/" class="btn" target="_blank" aria-label="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.36H4.7V24H.22V8.36zM7.98 8.36h4.25v2.13h.06c.59-1.12 2.02-2.3 4.15-2.3 4.44 0 5.26 2.92 5.26 6.72V24h-4.48v-7.91c0-1.88-.03-4.3-2.63-4.3-2.63 0-3.04 2.06-3.04 4.18V24H7.98V8.36z"/></svg>
+    </a>
+    <a href="mailto:dahanychoi@gmail.com" class="btn" aria-label="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1.5 4A1.5 1.5 0 0 0 0 5.5v13A1.5 1.5 0 0 0 1.5 20h21a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 22.5 4h-21zm0 1.5h21v.217L12 13.5 1.5 5.717V5.5zM1.5 7.783 9.94 14.21a1.5 1.5 0 0 0 2.12 0L22.5 7.783V18.5h-21V7.783z"/></svg>
+    </a>
+    <button class="btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+      <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M9 21h6v-2H9v2zm3-19a7 7 0 0 0-3 13.326V17a1 1 0 0 0 2 0v-1h2v1a1 1 0 0 0 2 0v-1.674A7 7 0 0 0 12 2z"/>
+      </svg>
+    </button>
+  </div>
 
+  <footer>
+    ⚡ Powered by boredom.
+  </footer>
 
-    <section>
-        <a href="https://www.linkedin.com/in/dahanychoi/"><button class="btn linkedin"><ion-icon name="logo-linkedin"></ion-icon></button></memes></a>
-        <a href="./venmo"><button class="btn venmo"><ion-icon name="logo-venmo"></ion-icon></button></memes></a>
-        <!--<a href="https://longdogechallenge.com/"><button class="btn meme">(ㆆ _ ㆆ)</button></memes></a>-->
-        <a><button class="btn nothing">nothing</button></memes></a>
-    </section>
-
-
-
-    <footer>
-        <h1>powered by ethically sourced dread.</h1>
-    </footer>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
 </body>
-    
 </html>
+
