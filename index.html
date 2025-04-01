@@ -191,7 +191,22 @@ $2keyframes flicker {
     }
 
     
-  </style>
+    .robot-label {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1rem;
+    color: red;
+    transform: rotate(-5deg);
+    margin-top: 4px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .robot-label {
+      font-size: 0.9rem;
+      transform: rotate(0deg);
+    }
+  }
+</style>
 </head>
 <body>
   <div class="title-wrapper" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
@@ -200,26 +215,24 @@ $2keyframes flicker {
 </div>
 <div class="button-group">
     <div style="display: flex; flex-direction: column; align-items: center;">
-      <a href="https://www.linkedin.com/in/dahanychoi/" class="btn" target="_blank" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/yourprofile" class="btn" target="_blank" aria-label="LinkedIn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.36H4.7V24H.22V8.36zM7.98 8.36h4.25v2.13h.06c.59-1.12 2.02-2.3 4.15-2.3 4.44 0 5.26 2.92 5.26 6.72V24h-4.48v-7.91c0-1.88-.03-4.3-2.63-4.3-2.63 0-3.04 2.06-3.04 4.18V24H7.98V8.36z"/></svg>
       </a>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center;">
-      <a href="mailto:dahanychoi@gmail.com" class="btn" aria-label="Email">
+      <a href="mailto:youremail@example.com" class="btn" aria-label="Email">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M1.5 4A1.5 1.5 0 0 0 0 5.5v13A1.5 1.5 0 0 0 1.5 20h21a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 22.5 4h-21zm0 1.5h21v.217L12 13.5 1.5 5.717V5.5zM1.5 7.783 9.94 14.21a1.5 1.5 0 0 0 2.12 0L22.5 7.783V18.5h-21V7.783z"/>
         </svg>
       </a>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center;">
-      <a href="https://www.youtube.com/watch?v=jfKfPfyJRdk" class="btn" target="_blank" aria-label="YouTube">
+      <a href="" class="btn" target="_blank" aria-label="YouTube">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
           <path d="M549.7 124.1c-6.3-23.8-24.9-42.5-48.6-48.9C456.5 64 288 64 288 64S119.5 64 74.9 75.2c-23.7 6.4-42.3 25.1-48.6 48.9C16 168.4 16 256 16 256s0 87.6 10.3 131.9c6.3 23.8 24.9 42.5 48.6 48.9C119.5 448 288 448 288 448s168.5 0 213.1-11.2c23.7-6.4 42.3-25.1 48.6-48.9 10.3-44.3 10.3-131.9 10.3-131.9s0-87.6-10.3-131.9zM232 336V176l142 80-142 80z"/>
         </svg>
       </a>
-      <!--
-      <div style="font-family: 'Comic Sans MS', cursive; font-size: 1rem; color: red; transform: rotate(-5deg); margin-top: 4px;"><span style="font-size: 1.2rem;">⬆</span> click for<br>robots</div>
-      -->
+      <div class="robot-label"><span style="font-size: 1.2rem;">⬆</span> click for<br>robots</div>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center;">
       <button class="btn" onclick="toggleTheme()" aria-label="Toggle Theme">
@@ -229,7 +242,7 @@ $2keyframes flicker {
       </button>
     </div>
   </div>
-  <footer>i'm out of ideas 🤷‍♂️</footer>
+  <footer>im out of ideas. 🤷‍♂️</footer>
 
   <script>
     function toggleTheme() {
