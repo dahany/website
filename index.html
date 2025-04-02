@@ -48,11 +48,11 @@
     }
 
     h1 {
-  font-size: 4rem;
-  margin-bottom: 0.25rem;
-  letter-spacing: -1px;
-  font-weight: 600;
-}
+      font-size: 4rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: -1px;
+      font-weight: 600;
+    }
 
     h1 a {
       color: var(--text-color);
@@ -60,14 +60,14 @@
     }
 
     .subtitle {
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  color: var(--text-color);
-  opacity: 0.6;
-  max-width: 100%;
-  width: fit-content;
-  display: inline-block;
-}
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+      color: var(--text-color);
+      opacity: 0.6;
+      max-width: 100%;
+      width: fit-content;
+      display: inline-block;
+    }
 
     .button-group {
       display: flex;
@@ -104,53 +104,93 @@
     }
 
     footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.85rem;
-      color: var(--text-color);
-      opacity: 0.4;
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.4;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+      --footer-text: 'im out of ideas 🤷‍♂️';
+    }
+    }
+
+    footer::after {
+  content: '_';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink-caret 1s step-start infinite;
+}
+
+    @keyframes typing {
+      0% { width: 0ch; }
+      45% { width: 22ch; }
+      55% { width: 22ch; }
+      100% { width: 0ch; }
+    }
+
+    @keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+  50% { opacity: 0; }
+}
+  50% { opacity: 0; }
+}
+      50% { opacity: 0; }
     }
 
     @media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
+      h1 {
+        font-size: 2rem;
+      }
 
-  .subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 12px;
-    max-width: 240px;
-  }
-
-  .button-group {
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  .btn svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-      
+      .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
 
       .btn {
-        width: 100px;
-        padding: 10px 20px;
+        width: 100%;
+        padding: 12px;
+        max-width: 240px;
+      }
+
+      .button-group {
+        flex-direction: column;
+        gap: 1.25rem;
       }
 
       .btn svg {
         width: 20px;
         height: 20px;
       }
+
+      .robot-label {
+        font-family: 'Comic Neue', cursive;
+        font-size: 0.9rem;
+        color: red;
+        transform: rotate(-5deg);
+        text-align: center;
+        font-weight: bold;
+      }
     }
-      .dot {
+
+    .robot-label {
+      font-family: 'Comic Neue', cursive;
+      font-size: 1rem;
+      color: red;
+      transform: rotate(-5deg);
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .dot {
       opacity: 0;
       animation: blink 1.5s infinite;
     }
@@ -166,75 +206,31 @@
     }
 
     @keyframes blink {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.dots .dot {
-  opacity: 0;
-  animation: blink 1.5s infinite;
-}
-
-.dots .dot:nth-child(1) {
-  animation-delay: 0s;
-}
-.dots .dot:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.dots .dot:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-$2keyframes flicker {
-      0%, 100% { fill: var(--text-color); }
-      50% { fill: yellow; }
+      0% { opacity: 0; }
+      20% { opacity: 1; }
+      100% { opacity: 0; }
     }
-
-    
-    $1
-  
-
-  @media (max-width: 600px) {
-$1.robot-label {
-  font-family: 'Comic Neue', cursive;
-  font-size: 0.9rem;
-  color: red;
-  transform: rotate(-5deg);
-  text-align: center;
-  font-weight: bold;
+  .blinking-cursor {
+  animation: blink-caret 1s step-start infinite;
 }
-$2}
-  .robot-label {
-    font-family: 'Comic Neue', cursive;
-    font-size: 1rem;
-    color: red;
-    transform: rotate(-5deg);
-    text-align: center;
-    font-weight: bold;
-  }
 
-  @media (max-width: 600px) {
-    .robot-label {
-      font-family: 'Comic Neue', cursive;
-      font-size: 0.9rem;
-      color: red;
-      transform: rotate(-5deg);
-      text-align: center;
-      font-weight: bold;
-    }
-  }
+@keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 </style>
 </head>
 <body>
   <div class="title-wrapper" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-  <h1><a href="/">dahany.com</a></h1>
-  <div class="subtitle">this domain gets more expensive every year<span class="dots"><span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span></div>
-</div>
-<div class="button-group">
+    <h1><a href="/">dahany.com</a></h1>
+    <div class="subtitle">this domain gets more expensive every year<span class="dots"><span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></span></div>
+  </div>
+  <div class="button-group">
     <div style="display: flex; flex-direction: column; align-items: center;">
       <a href="https://www.linkedin.com/in/dahanychoi/" class="btn" target="_blank" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.36H4.7V24H.22V8.36zM7.98 8.36h4.25v2.13h.06c.59-1.12 2.02-2.3 4.15-2.3 4.44 0 5.26 2.92 5.26 6.72V24h-4.48v-7.91c0-1.88-.03-4.3-2.63-4.3-2.63 0-3.04 2.06-3.04 4.18V24H7.98V8.36z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
+  <path d="M502.3 190.8 327.4 338c-21.6 18.1-53.2 18.1-74.8 0L9.7 190.8C3.9 186 0 178.6 0 170.6c0-25.6 20.8-46.4 46.4-46.4h419.2c25.6 0 46.4 20.8 46.4 46.4 0 8-3.9 15.4-9.7 20.2zM480 224.8 334.1 351.3c-32.7 27.5-79.5 27.5-112.2 0L32 224.8V400c0 25.6 20.8 46.4 46.4 46.4h355.2c25.6 0 46.4-20.8 46.4-46.4V224.8z"/>
+</svg>
       </a>
     </div>
     <div style="display: flex; flex-direction: column; align-items: center;">
@@ -246,13 +242,10 @@ $2}
     </div>
     <div style="display: flex; flex-direction: column; align-items: center;">
       <a href="https://www.youtube.com/watch?v=jfKfPfyJRdk" class="btn" target="_blank" aria-label="YouTube">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-          <path d="M549.7 124.1c-6.3-23.8-24.9-42.5-48.6-48.9C456.5 64 288 64 288 64S119.5 64 74.9 75.2c-23.7 6.4-42.3 25.1-48.6 48.9C16 168.4 16 256 16 256s0 87.6 10.3 131.9c6.3 23.8 24.9 42.5 48.6 48.9C119.5 448 288 448 288 448s168.5 0 213.1-11.2c23.7-6.4 42.3-25.1 48.6-48.9 10.3-44.3 10.3-131.9 10.3-131.9s0-87.6-10.3-131.9zM232 336V176l142 80-142 80z"/>
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor">
+  <path d="M549.655 124.083c-6.281-23.725-24.871-42.282-48.61-48.563C456.533 64 288 64 288 64S119.467 64 74.955 75.52c-23.739 6.281-42.329 24.838-48.61 48.563C16 168.368 16 256.001 16 256.001s0 87.632 10.345 131.917c6.281 23.725 24.871 42.282 48.61 48.563C119.467 448.001 288 448.001 288 448.001s168.533 0 213.045-11.52c23.739-6.281 42.329-24.838 48.61-48.563C560 343.633 560 256.001 560 256.001s0-87.633-10.345-131.918zM232 336.001V176.001l142 80-142 80z"/>
+</svg>
       </a>
-        <!--
-      <div class="robot-label"><span style="font-size: 1.2rem;">↑</span> click for<br>robots</div>
-        -->
     </div>
     <div style="display: flex; flex-direction: column; align-items: center;">
       <button class="btn" onclick="toggleTheme()" aria-label="Toggle Theme">
@@ -262,12 +255,44 @@ $2}
       </button>
     </div>
   </div>
-  <footer>im out of ideas 🤷‍♂️</footer>
+  <footer id="animated-footer"><span id="footer-text"></span><span id="footer-cursor" class="blinking-cursor">_</span></footer>
 
   <script>
     function toggleTheme() {
       document.body.classList.toggle('light-mode');
     }
+
+    const text = "im out of ideas 🤷‍♂️";
+    const textEl = document.getElementById("footer-text");
+    const cursorEl = document.getElementById("footer-cursor");
+    let index = 0;
+    let direction = 1;
+
+    function typeLoop() {
+      textEl.textContent = text.substring(0, index);
+      if (direction === 1) {
+        if (index < text.length) {
+          index++;
+        } else {
+          direction = -1;
+          setTimeout(typeLoop, 2000);
+          return;
+        }
+      } else {
+      if (index > 0) {
+        index--;
+      } else {
+        direction = 1;
+        setTimeout(typeLoop, 2000);
+        return;
+        }
+      }
+      setTimeout(typeLoop, 100);
+    }
+
+    typeLoop();
+
+    
   </script>
 </body>
 </html>
